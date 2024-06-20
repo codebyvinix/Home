@@ -1,0 +1,169 @@
+/* -------- Styling © Code by Vinix -------------------------------- */
+#body{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--theme-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    /* icons-sizes */
+    #youtube{
+        width: 26px;
+    }
+    #google-drive{
+        width: 26px;
+    }
+    #github{
+        width: 28px;
+    }
+    #chatgpt{
+        width: 38px;
+    }
+    #telegram{
+        width: 44px;
+    }
+    #whatsapp{
+        width: 26px;
+    }
+
+    /* Icons:hover-states */
+
+    /* YouTube */
+    a:nth-child(1):hover{
+        background: #FFF;
+    }
+    a:nth-child(1):hover > #youtube path:nth-child(1){
+        fill: #FFF;
+    }
+    a:nth-child(1):hover > #youtube path:nth-child(3){
+        fill: #d60000;
+    }
+    /* Google Drive */
+    a:nth-child(2):hover{
+        background: #FFF;
+    }
+    a:nth-child(2):hover > #google-drive path:nth-child(1){
+        fill: #FFC107;
+    }
+    a:nth-child(2):hover > #google-drive path:nth-child(2){
+        fill: #2196F3;
+    }
+    a:nth-child(2):hover > #google-drive path:nth-child(3){
+        fill: #4CAF50;
+    }
+    /* GitHub */
+    a:nth-child(3):hover{
+        background: #171515;
+    }
+    /* ChatGPT */
+    a:nth-child(4):hover{
+        background: #74AA9C;
+    }
+    /* Telegram */
+    a:nth-child(5):hover{
+        background: #24A1DE;
+    }
+    /* WhatsApp */
+    a:nth-child(6):hover{
+        background: #25D366;
+    }
+}
+.center{
+    & p{
+        color: var(--visible-color);
+        font-size: var(--fs-24);
+        font-weight: var(--fw-regular);
+        letter-spacing: 1px;
+        position: relative;
+
+        &::after{
+            content: '';
+            position: absolute;
+            right: 1px;
+            bottom: -8px;
+            width: 12px;
+            height: 4px;
+            border-radius: 24px;
+            background: var(--blue-color);
+        }
+    }
+}
+.right{
+    & .secondary-btn svg{
+        width: 18px;
+        rotate: 90deg;
+
+        & polyline, line{
+            stroke: var(--visible-color);
+        }
+    }
+    & a:nth-child(2){
+        display: none;
+    }
+}
+/* Checkbox Styling */
+#checkbox{
+    display: none;
+}
+#checkbox:checked ~ #body{
+    --theme-color: #FFFFFF;
+    --visible-color: #1C1D20;
+}
+
+/* media-queries */
+@media (max-width:500px) {
+    #body{
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    .left{
+        flex-direction: row;
+        gap: 2rem;
+        flex-wrap: wrap;
+        /* icons-sizes */
+        #youtube{
+            width: calc(26px - 2px);
+        }
+        #google-drive{
+            width: calc(26px - 2px);
+        }
+        #github{
+            width: calc(28px - 2px);
+        }
+        #chatgpt{
+            width: calc(38px - 2px);
+        }
+        #telegram{
+            width: calc(44px - 2px);
+        }
+        #whatsapp{
+            width: calc(26px - 2px);
+        }
+    }
+    .center{
+        & p{
+            font-size: var(--fs-18);
+        }
+    }
+    .right{
+        & .secondary-btn svg{
+            width: calc(18px - 4px);
+        }
+        & a:nth-child(1){
+            display: none;
+        }
+        & a:nth-child(2){
+            display: flex;
+        }
+    }
+}
