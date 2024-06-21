@@ -3,29 +3,8 @@
 /* font-family */
 @font-face {
     font-family: 'Vinix Sans';
-    src: url('Fonts/NeueMontreal-Light.otf') format('opentype');
-    font-weight: 200;
-    font-style: normal;
-    font-display: auto;
-}
-@font-face {
-    font-family: 'Vinix Sans';
     src: url('Fonts/NeueMontreal-Regular.otf') format('opentype');
     font-weight: 300;
-    font-style: normal;
-    font-display: auto;
-}
-@font-face {
-    font-family: 'Vinix Sans';
-    src: url('Fonts/NeueMontreal-Medium.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: auto;
-}
-@font-face {
-    font-family: 'Vinix Sans';
-    src: url('Fonts/NeueMontreal-Bold.otf') format('opentype');
-    font-weight: 500;
     font-style: normal;
     font-display: auto;
 }
@@ -40,24 +19,11 @@
     --icons-bg: #393b41;
 
     /* font-size */
-    --fs-8: 0.5rem;
-    --fs-16: 1rem;
-    --fs-18: 1.125rem;
-    --fs-24: 1.5rem;
-    --fs-32: 2rem;
-    --fs-40: 2.5rem;
-    --fs-48: 3rem;
+    --fs-18: 18px;
+    --fs-24: 24px;
     
     /* font-weight */
-    --fw-light: 200;
     --fw-regular: 300;
-    --fw-medium: 400;
-    --fw-bold: 500;
-
-    /* box-model */
-    --section-padding: clamp(5em, 21vh, 12em);
-    --container-padding: clamp(2.5em, 8vw, 8em);
-    --gap-padding: clamp(1.5em, 4vw, 2.5em);
 }
 
 /* resets */
@@ -65,13 +31,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Vinix Sans';
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
 }
 html, body {
     background: var(--theme-color);
-    font-family: 'Vinix Sans';
-    font-size: 16px;
-    -webkit-font-smoothing: antialiased;
 }
 ::selection{
     background-color: var(--blue-color);
@@ -87,8 +52,8 @@ label{
 
 /* buttons */
 .primary-btn{
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     background: var(--icons-bg);
     display: flex;
@@ -100,8 +65,8 @@ label{
     scale: 1.2;
 }
 .secondary-btn{
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     border: 2px solid var(--blue-color);
     background: none;
@@ -119,12 +84,9 @@ label{
 
 /* media-queries */
 @media screen and (max-width: 500px) {
-    .primary-btn{
-        width: calc(2.75rem - 2px);
-        height: calc(2.75rem - 2px);
-    }
+    .primary-btn,
     .secondary-btn{
-        width: calc(2.75rem - 2px);
-        height: calc(2.75rem - 2px);
+        width: calc(44px - 2px);
+        height: calc(44px - 2px);
     }
 }

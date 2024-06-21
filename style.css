@@ -7,14 +7,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1.5rem;
+    padding: 0 24px;
 }
 .left{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 48px;
 
     /* icons-sizes */
     #youtube{
@@ -36,45 +36,38 @@
         width: 26px;
     }
 
-    /* Icons:hover-states */
-
-    /* YouTube */
-    a:nth-child(1):hover{
+    /* icon:hover-states */
+    .youtube:hover{
         background: #FFF;
     }
-    a:nth-child(1):hover > #youtube path:nth-child(1){
+    .youtube:hover > #youtube path:nth-child(1){
         fill: #FFF;
     }
-    a:nth-child(1):hover > #youtube path:nth-child(3){
+    .youtube:hover > #youtube path:nth-child(3){
         fill: #d60000;
     }
-    /* Google Drive */
-    a:nth-child(2):hover{
+    .google-drive:hover{
         background: #FFF;
     }
-    a:nth-child(2):hover > #google-drive path:nth-child(1){
+    .google-drive:hover > #google-drive path:nth-child(1){
         fill: #FFC107;
     }
-    a:nth-child(2):hover > #google-drive path:nth-child(2){
+    .google-drive:hover > #google-drive path:nth-child(2){
         fill: #2196F3;
     }
-    a:nth-child(2):hover > #google-drive path:nth-child(3){
+    .google-drive:hover > #google-drive path:nth-child(3){
         fill: #4CAF50;
     }
-    /* GitHub */
-    a:nth-child(3):hover{
+    .github:hover{
         background: #171515;
     }
-    /* ChatGPT */
-    a:nth-child(4):hover{
+    .chatgpt:hover{
         background: #74AA9C;
     }
-    /* Telegram */
-    a:nth-child(5):hover{
+    .telegram:hover{
         background: #24A1DE;
     }
-    /* WhatsApp */
-    a:nth-child(6):hover{
+    .whatsapp:hover{
         background: #25D366;
     }
 }
@@ -106,9 +99,6 @@
         & polyline, line{
             stroke: var(--visible-color);
         }
-    }
-    & a:nth-child(2){
-        display: none;
     }
 }
 /* Checkbox Styling */
@@ -158,12 +148,6 @@
     .right{
         & .secondary-btn svg{
             width: calc(18px - 4px);
-        }
-        & a:nth-child(1){
-            display: none;
-        }
-        & a:nth-child(2){
-            display: flex;
         }
     }
 }
