@@ -7,71 +7,34 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 24px;
+    padding: 0 16px;
 }
-.left{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 48px;
+aside{
+    width: auto;
+    height: 64%;
+    overflow-y: scroll;
 
-    /* icons-sizes */
-    #youtube{
-        width: 26px;
-    }
-    #google-drive{
-        width: 26px;
-    }
-    #github{
-        width: 28px;
-    }
-    #chatgpt{
-        width: 38px;
-    }
-    #telegram{
-        width: 44px;
-    }
-    #whatsapp{
-        width: 26px;
-    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+        padding: 12px;
 
-    /* icon:hover-states */
-    .youtube:hover{
-        background: #FFF;
-    }
-    .youtube:hover > #youtube path:nth-child(1){
-        fill: #FFF;
-    }
-    .youtube:hover > #youtube path:nth-child(3){
-        fill: #d60000;
-    }
-    .google-drive:hover{
-        background: #FFF;
-    }
-    .google-drive:hover > #google-drive path:nth-child(1){
-        fill: #FFC107;
-    }
-    .google-drive:hover > #google-drive path:nth-child(2){
-        fill: #2196F3;
-    }
-    .google-drive:hover > #google-drive path:nth-child(3){
-        fill: #4CAF50;
-    }
-    .github:hover{
-        background: #171515;
-    }
-    .chatgpt:hover{
-        background: #74AA9C;
-    }
-    .telegram:hover{
-        background: #24A1DE;
-    }
-    .whatsapp:hover{
-        background: #25D366;
+        .primary-btn{
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--icons-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s ease-in;
+        }
     }
 }
-.center{
+main{
     & p{
         color: var(--visible-color);
         font-size: var(--fs-24);
@@ -92,8 +55,29 @@
     }
 }
 .right{
-    & .secondary-btn svg{
-        width: 18px;
+    padding: 12px;
+
+    .secondary-btn{
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 2px solid var(--blue-color);
+        background: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s ease-in;
+    }
+
+    .secondary-btn:hover{
+        background: var(--blue-color);
+    }
+    .secondary-btn:focus{
+        background: var(--dark-blue-color);
+    }
+
+    .secondary-btn svg{
+        width: 16px;
         rotate: 90deg;
 
         & polyline, line{
@@ -114,40 +98,63 @@
 @media (max-width:500px) {
     #body{
         flex-direction: column;
-        padding: 1.5rem;
+        padding: 16px 0;
     }
-    .left{
-        flex-direction: row;
-        gap: 2rem;
-        flex-wrap: wrap;
-        /* icons-sizes */
-        #youtube{
-            width: calc(26px - 2px);
+    aside{
+        width: 77%;
+        height: auto;
+        display: flex;
+        overflow-x: scroll;
+
+        .content{
+            flex-direction: row;
+            justify-content: center;
+            gap: 32px;
+            padding: 8px;
         }
-        #google-drive{
-            width: calc(26px - 2px);
-        }
-        #github{
-            width: calc(28px - 2px);
-        }
-        #chatgpt{
-            width: calc(38px - 2px);
-        }
-        #telegram{
-            width: calc(44px - 2px);
-        }
-        #whatsapp{
-            width: calc(26px - 2px);
+
+        .primary-btn{
+            width: 42px;
+            height: 42px;
         }
     }
-    .center{
+    aside{
+        .content{
+            #youtube{
+                width: 24px;
+            }
+            #google-drive{
+                width: 24px;
+            }
+            #github{
+                width: 26px;
+            }
+            #chatgpt{
+                width: 36px;
+            }
+            #telegram{
+                width: 42px;
+            }
+            #whatsapp{
+                width: 24px;
+            }
+        }
+    }
+    main{
         & p{
             font-size: var(--fs-18);
         }
     }
     .right{
-        & .secondary-btn svg{
-            width: calc(18px - 4px);
+        padding: 8px;
+
+        .secondary-btn{
+            width: 42px;
+            height: 42px;
+        }
+
+        .secondary-btn svg{
+            width: 14px;
         }
     }
 }

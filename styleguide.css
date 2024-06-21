@@ -13,7 +13,7 @@
 :root{
     /* colors */
     --theme-color: #1C1D20;
-    --visible-color: #FFFFFF;
+    --visible-color: #F0F0F0;
     --blue-color: #455CE9;
     --dark-blue-color: #334BD3;
     --icons-bg: #393b41;
@@ -40,8 +40,10 @@ html, body {
 }
 ::selection{
     background-color: var(--blue-color);
-    color: var(--visible-color);
-    text-shadow: none;
+    color: var(--theme-color);
+}
+::-webkit-scrollbar{
+    display: none;
 }
 a{
     text-decoration: none;
@@ -50,43 +52,93 @@ label{
     cursor: pointer;
 }
 
-/* buttons */
-.primary-btn{
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--icons-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.2s ease-in;
-}
-.primary-btn:hover{
-    scale: 1.2;
-}
-.secondary-btn{
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: 2px solid var(--blue-color);
-    background: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.2s ease-in;
-}
-.secondary-btn:hover{
-    background: var(--blue-color);
-}
-.secondary-btn:focus{
-    background: var(--dark-blue-color);
-}
-
-/* media-queries */
-@media screen and (max-width: 500px) {
-    .primary-btn,
-    .secondary-btn{
-        width: calc(44px - 2px);
-        height: calc(44px - 2px);
+/* :hover-states */
+aside{
+    .content{
+        /* icon-sizes */
+        #youtube{
+            width: 26px;
+        }
+        #github{
+            width: 28px;
+        }
+        #chatgpt{
+            width: 38px;
+        }
+        #google-drive{
+            width: 26px;
+        }
+        #whatsapp{
+            width: 26px;
+        }
+        #telegram{
+            width: 44px;
+        }
+        #gmail{
+            width: 26px;
+        }
+    
+        /* icon:hover-states */
+        .primary-btn:hover{
+            scale: 1.2;
+        }
+        /* YouTube */
+        .youtube:hover{
+            background: #FFF;
+        }
+        .youtube:hover > #youtube path:nth-child(1){
+            fill: #FFF;
+        }
+        .youtube:hover > #youtube path:nth-child(3){
+            fill: #d60000;
+        }
+        /* GitHub */
+        .github:hover{
+            background: #171515;
+        }
+        /* ChatGPT */
+        .chatgpt:hover{
+            background: #74AA9C;
+        }
+        /* Google Drive */
+        .google-drive:hover{
+            background: #FFF;
+        }
+        .google-drive:hover > #google-drive path:nth-child(1){
+            fill: #FFC107;
+        }
+        .google-drive:hover > #google-drive path:nth-child(2){
+            fill: #2196F3;
+        }
+        .google-drive:hover > #google-drive path:nth-child(3){
+            fill: #4CAF50;
+        }
+        /* WhatsApp */
+        .whatsapp:hover{
+            background: #25D366;
+        }
+        /* Telegram */
+        .telegram:hover{
+            background: #24A1DE;
+        }
+        /* Gmail */
+        .gmail:hover{
+            background: #FFF;
+        }
+        .gmail:hover > #gmail path:nth-child(1){
+            fill: #EA4435;
+        }
+        .gmail:hover > #gmail path:nth-child(2){
+            fill: #00AC47;
+        }
+        .gmail:hover > #gmail path:nth-child(3){
+            fill: #FFBA00;
+        }
+        .gmail:hover > #gmail path:nth-child(4){
+            fill: #4285F4;
+        }
+        .gmail:hover > #gmail path:nth-child(5){
+            fill: #C52528;
+        }
     }
 }
