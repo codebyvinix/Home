@@ -45,7 +45,7 @@ main {
         &::after {
             content: '';
             position: absolute;
-            right: 1px;
+            right: 0.5px;
             bottom: -8px;
             width: 12px;
             height: 4px;
@@ -115,6 +115,10 @@ main {
     main {
         & p {
             font-size: var(--fs-18);
+
+            &::after {
+                width: 9px;
+            }
         }
     }
     .right {
