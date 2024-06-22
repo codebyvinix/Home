@@ -1,5 +1,5 @@
-/* -------- Styling © Code by Vinix -------------------------------- */
-#body{
+/* ------- Styling © Code by Vinix --------------------- */
+#body {
     width: 100%;
     height: 100vh;
     background-color: var(--theme-color);
@@ -7,22 +7,22 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
+    padding: 0 24px;
 }
-aside{
+aside {
     width: auto;
-    height: 64%;
+    height: 244px;
     overflow-y: scroll;
 
-    .content{
+    .content {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 48px;
+        gap: 44px;
         padding: 12px;
 
-        .primary-btn{
+        .primary-btn {
             width: 44px;
             height: 44px;
             border-radius: 50%;
@@ -34,15 +34,15 @@ aside{
         }
     }
 }
-main{
-    & p{
+main {
+    & p {
         color: var(--visible-color);
         font-size: var(--fs-24);
         font-weight: var(--fw-regular);
         letter-spacing: 1px;
         position: relative;
 
-        &::after{
+        &::after {
             content: '';
             position: absolute;
             right: 1px;
@@ -54,10 +54,10 @@ main{
         }
     }
 }
-.right{
+.right {
     padding: 12px;
 
-    .secondary-btn{
+    .secondary-btn {
         width: 44px;
         height: 44px;
         border-radius: 50%;
@@ -69,92 +69,62 @@ main{
         transition: 0.2s ease-in;
     }
 
-    .secondary-btn:hover{
+    .secondary-btn:hover {
         background: var(--blue-color);
     }
-    .secondary-btn:focus{
+    .secondary-btn:focus {
         background: var(--dark-blue-color);
     }
 
-    .secondary-btn svg{
+    .secondary-btn svg {
         width: 16px;
         rotate: 90deg;
 
-        & polyline, line{
+        & polyline, line {
             stroke: var(--visible-color);
         }
     }
+
+    & a:nth-child(2) {
+        display: none;
+    }
 }
 /* Checkbox Styling */
-#checkbox{
+#checkbox {
     display: none;
 }
-#checkbox:checked ~ #body{
+#checkbox:checked ~ #body {
     --theme-color: #FFFFFF;
     --visible-color: #1C1D20;
 }
 
 /* media-queries */
 @media (max-width:500px) {
-    #body{
+    #body {
         flex-direction: column;
-        padding: 16px 0;
+        padding: 12px 0;
     }
-    aside{
-        width: 77%;
+    aside {
+        width: 232px;
         height: auto;
         display: flex;
         overflow-x: scroll;
 
-        .content{
+        .content {
             flex-direction: row;
-            justify-content: center;
-            gap: 32px;
-            padding: 8px;
-        }
-
-        .primary-btn{
-            width: 42px;
-            height: 42px;
         }
     }
-    aside{
-        .content{
-            #youtube{
-                width: 24px;
-            }
-            #google-drive{
-                width: 24px;
-            }
-            #github{
-                width: 26px;
-            }
-            #chatgpt{
-                width: 36px;
-            }
-            #telegram{
-                width: 42px;
-            }
-            #whatsapp{
-                width: 24px;
-            }
-        }
-    }
-    main{
-        & p{
+    main {
+        & p {
             font-size: var(--fs-18);
         }
     }
-    .right{
-        padding: 8px;
-
-        .secondary-btn{
-            width: 42px;
-            height: 42px;
+    .right {
+        & a:nth-child(1) {
+            display: none;
         }
-
-        .secondary-btn svg{
-            width: 14px;
+        & a:nth-child(2) {
+            display: flex;
         }
     }
 }
