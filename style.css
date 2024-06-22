@@ -70,9 +70,7 @@ main {
     }
 
     .secondary-btn:hover {
-        background: var(--blue-color);
-    }
-    .secondary-btn:focus {
+        border-color: var(--blue-color);
         background: var(--dark-blue-color);
     }
 
