@@ -1,6 +1,6 @@
 <div align="center">
   
-  <img src="./Readme_Images/Project_Logo.png" />
+  <img src="./Readme_Images/Project_Logo_02.png" />
 
   <h2 align="center">New Tab</h2>
 
