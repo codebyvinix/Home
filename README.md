@@ -1,21 +1,12 @@
 <div align="center">
   
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/dashboard)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/dashboard?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/dashboard?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/ECC-7Ogn_rw?style=social)](https://youtu.be/ECC-7Ogn_rw)
-
-  <br />
-  <br />
-  
-  <img src="./readme-images/project-logo.png" />
+  <img src="./Readme_Images/Project_Logo.png" />
 
   <h2 align="center">New Tab</h2>
 
-  This dashboard is fully responsive for all devices, <br/> Built using HTML, CSS, and JavaScript.
+  This New Tab is fully responsive for all devices, <br/> Built using HTML and CSS.
 
-  <a href="https://codewithsadee.github.io/dashboard/"><strong>➥ Live Demo</strong></a>
+  <a href="https://codebyvinix.github.io/New-Tab/"><strong>➥ Live Preview</strong></a>
 
 </div>
 
@@ -23,7 +14,7 @@
 
 ### Demo Screeshots
 
-![Dashboard Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+![Dashboard Desktop Demo](./Readme_Images/Desktop.png "Desktop Demo")
 
 ### Prerequisites
 
@@ -33,23 +24,23 @@ Before you begin, ensure you have met the following requirements:
 
 ### Run Locally
 
-To run **Dashboard** locally, run this command on your git bash:
+To run **New-Tab** locally, run this command on your git bash:
 
 Linux and macOS:
 
 ```bash
-sudo git clone https://github.com/codewithsadee/dashboard.git
+sudo git clone https://codebyvinix.github.io/New-Tab/
 ```
 
 Windows:
 
 ```bash
-git clone https://github.com/codewithsadee/dashboard.git
+git clone https://codebyvinix.github.io/New-Tab/
 ```
 
 ### Contact
 
-If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
+If you want to contact with me you can reach me at [Instagram](https://www.instagram.com/krvinitgupta_).
 
 ### License
 
